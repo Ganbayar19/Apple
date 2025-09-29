@@ -228,16 +228,29 @@ p {
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
+  display: flexs;
 }
-
+.scroll-container {
+  width: 100vw;
+  overflow: scroll;
+}
 .scroll {
   display: flex;
+  width: fit-content;
   gap: 10px;
-  overflow: scroll;
-  overflow: hidden;
-  scroll-snap-type: mandatory;
   cursor: grab;
+}
+
+.item h1 {
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
 }
 
 .item {
@@ -251,15 +264,47 @@ p {
   height: auto;
   display: block;
   object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.slide-container {
+  width: 100vh;
+  margin: 40px auto;
+  overflow-y: hidden;
 }
 
 .slider {
   display: flex;
-  gap: 10px;
-  overflow: scroll;
+  gap: 16px;
+  width: max-content;
+  animation: scroll 35s linear infinite;
+}
+
+.slider:hover {
+  animation-play-state: paused;
+}
+
+.img {
+  flex: 0 0 300px;
   overflow: hidden;
-  scroll-snap-type: mandatory;
-  cursor: grab;
+  width: 417px;
+  height: 236px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .slider::-webkit-scrollbar {
@@ -282,4 +327,17 @@ p {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.tablist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.tablist img {
+  width: 220px;
+  height: 8px;
+  gap: 10px;
 }
