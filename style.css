@@ -277,6 +277,12 @@ p {
   scroll-snap-align: center;
 }
 
+.gallery h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .slide-container {
   width: 100vh;
   margin: 40px auto;
@@ -371,6 +377,15 @@ p {
   gap: 24px;
 }
 
+.contain-color{[
+  #F5F5F7
+]}
+
+.bg {
+  width: 100%;
+  height: auto;
+}
+
 .notice {
   background-color: #fff;
   text-align: center;
@@ -403,16 +418,46 @@ p {
 .card {
   display: flex;
   gap: 20px;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  padding-bottom: 20px;
 }
 
-.card .img {
-  flex: 0 0 auto;
+.card .card-img {
+  width: 480px;
+  height: 500px;
+}
+
+.card img {
+  width: 480px;
+  height: 500px;
+  border-radius: 20px;
+}
+.card h3 {
+  font-size: 1.2rem;
+  margin: 16px 0 8px 0;
+  color: #000;
+}
+
+.card1 {
+  position: relative;
   width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card1 .img1s {
+  width: 100%;
+  display: block;
   border-radius: 20px;
   overflow: hidden;
+  height: 500px;
+}
+
+.text-overly1 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: black;
+  font-weight: 600;
+  z-index: 2;
 }
 
 .img img {
@@ -421,6 +466,10 @@ p {
   object-fit: cover;
   width: 480px;
   height: auto;
+}
+
+.header span {
+  color: linear-gradient(90deg, #0090f7 0%, #ba62fc 50%, #f2416b 100%);
 }
 
 .section {
@@ -444,4 +493,16 @@ p {
   object-fit: cover;
   width: 480px;
   height: auto;
+}
+
+.box-container {
+  width: 313px;
+  height: 500px;
+  color: #000;
+  border-radius: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
 }
