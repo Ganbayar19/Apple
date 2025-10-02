@@ -365,21 +365,12 @@ p {
   gap: 10px;
 }
 
-.store-header {
-  text-align: center;
-  padding: 60px 0 20px;
-}
-
 .nav {
   padding: 15px;
   display: flex;
   justify-content: center;
   gap: 24px;
 }
-
-.contain-color{[
-  #F5F5F7
-]}
 
 .bg {
   width: 100%;
@@ -395,8 +386,45 @@ p {
 }
 
 .store-header {
-  width: 1250px;
-  margin: 40px auto;
+  font-family: "SF pro Display", Arial, sans-serif;
+  padding: 40px 0;
+}
+
+.store-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.store-header .store {
+  color: linear-gradient(90deg, #0090f7 0%, #ba62fc 50%, #f2416b 100%);
+}
+
+.product-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.product-nav .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.product-nav .item img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.product-nav .item p {
+  font-size: 14px;
+  color: #1d1d1f;
 }
 
 .gallery {
@@ -415,40 +443,54 @@ p {
   gap: 12px;
 }
 
-.card {
+.product {
   display: flex;
+  flex-direction: row;
   gap: 20px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
 }
 
-.card .card-img {
-  width: 480px;
-  height: 500px;
+.card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .card img {
-  width: 480px;
-  height: 500px;
-  border-radius: 20px;
-}
-.card h3 {
-  font-size: 1.2rem;
-  margin: 16px 0 8px 0;
-  color: #000;
-}
-
-.card1 {
-  position: relative;
-  width: 300px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.card1 .img1s {
   width: 100%;
+  height: auto;
   display: block;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 500px;
+}
+
+.card .text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+.card .text h2 {
+  color: #b64400;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card .text h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card1 .text p {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .text-overly1 {
@@ -495,14 +537,67 @@ p {
   height: auto;
 }
 
-.box-container {
+.box-header {
+  font-family: "SF pro Display", Arial, sans-serif;
+  padding: 40px 0;
+}
+
+.box-header h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.box-header .header {
+  color: linear-gradient(90deg, #0090f7 0%, #ba62fc 50%, #f2416b 100%);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.nav .box-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav .img img {
   width: 313px;
   height: 500px;
-  color: #000;
-  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.nav .box-text p {
+  font-size: 14px;
+  color: #1d1d1f;
+}
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .box {
+  width: 313px;
+  height: 500px;
+  background-color: grey;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.box:nth-child(1) img {
+  width: 230px;
+  height: 230px;
 }
